@@ -11212,7 +11212,7 @@ margin: 0 15px 15px 15px;
 height: 200px;
 width: 200px;
 border-radius: 50%;
-border: 7px solid #3241BD;
+border: 7px solid #0d6efd;
 }
 .content{
   font-size: 18px;
@@ -11230,6 +11230,7 @@ margin-right: 25px;
 }
 .bio h4 {
 font-family: 'Merriweather', cursive;
+color: #0d6efd;
 }
 /* Setinha do Carrossel */
 .carousel-control-next-icon, .carousel-control-prev-icon {

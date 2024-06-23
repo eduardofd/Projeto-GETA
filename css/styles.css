@@ -11192,8 +11192,8 @@ font-weight: 300;
 }
 .testimonials{
   max-width: 1000px;
-  padding: 0 15px 50px;
-  margin: 0 auto 80px auto;
+  padding: 0 15px 0px;
+  margin: 0 auto 0px auto;
 }
 .single-item{
   background: #212529;

@@ -504,9 +504,7 @@ output {
   border-radius: 2%;
 }
 
-.title {
 
-}
 
 [style*="--aspect-ratio"] > :first-child {
   width: 100%;

@@ -11239,3 +11239,11 @@ color: #0d6efd;
 @media (max-width:767px){
   
 }
+
+object {
+  margin-bottom: -9px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+}

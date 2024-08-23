@@ -11001,7 +11001,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, #0056ff47 0%, #120838c2 100%), url("../imgs/bg.jpg");
+  background: linear-gradient(to bottom, #0056ff47 0%, #120838c2 100%), url("../assets/bg/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;

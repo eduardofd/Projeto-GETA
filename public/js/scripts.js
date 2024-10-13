@@ -96,3 +96,24 @@ var options = {
   var chart = new ApexCharts(document.querySelector("#chart"), options);
   
   chart.render();
+
+  //firebase config 
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDRAJT-6EhEwS3Vw2BXbVXvMYdoRGNRvow",
+  authDomain: "geta-site.firebaseapp.com",
+  databaseURL: "https://geta-site-default-rtdb.firebaseio.com",
+  projectId: "geta-site",
+  storageBucket: "geta-site.appspot.com",
+  messagingSenderId: "735904865497",
+  appId: "1:735904865497:web:1c6ac6422aa25ba5d6f2c8",
+  measurementId: "G-LD2D54HDMK"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);

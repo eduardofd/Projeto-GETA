@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "sensor-cae7e"
-  }
+    "default": "sensor-cae7e",
+    "geta": "geta-site"
+  },
+  "targets": {},
+  "etags": {}
 }

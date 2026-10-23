@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "sensor-cae7e",
+    "default": "geta-plataforma",
     "geta": "geta-site"
   },
   "targets": {},

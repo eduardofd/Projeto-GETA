@@ -1,5 +1,6 @@
 /* ===== Equipe Técnica ===== */
-#equipe { background-color: #f4f6fb; }
+
+#equipe { background-color: #969cad; }
 
 .equipe-grid {
   display: flex;

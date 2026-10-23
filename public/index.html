@@ -7,7 +7,7 @@
         <meta name="author" content="Eduardo Francisco da Silva"/>
         <title>GETA - UFRPE</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../assets/logos/iconav.png"/>
+        <link rel="icon" type="image/x-icon" href="assets/logos/iconav.png"/>
         <!-- Bootstrap Icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
         <!-- Google fonts-->
@@ -16,6 +16,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/home.css" rel="stylesheet"/>
         <link href="css/portfolio.css" rel="stylesheet"/>
+        <link href="css/equipe.css" rel="stylesheet"/>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -69,159 +70,55 @@
         </section>
         <!--Equipe-->
         <section class="page-section" id="equipe">
-            <div class="container">
-                <h1 class="section-header">Equipe Técnica</h1>
-                <div class="testimonials">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <div class="single-item">
-                              <div class="row">
-                                  <div class="col-md-5">
-                                      <div class="profile">
-                                          <div class="img-area">
-                                              <img src="assets/equipe/edu_redm.jpg" alt="">
-                                          </div>
-                                          <div class="bio">
-                                              <h2>Eduardo Francisco</h2>
-                                              <h4>Desenvolvedor de Software</h4>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                      <div class="content">
-                                          <p><span><i class="fa fa-quote-left"></i></span>Técnico em Agropecuária formado pelo Colégio Agrícola Dom Agostinho Ikas - UFRPE, atualmente cursando Bacharelado em Agronomia pela UFRPE e pesquisador na área de Geotecnologias pelo Núcleo de Geoprocessamento e Sensoriamento Remoto da UFRPE.</p>
-                                          <p class="socials">
-                                            <a href="https://www.linkedin.com/in/eduardofranciscodasilva/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                            <a href="https://www.instagram.com/edu.081/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                            <a href="https://github.com/eduardofd" target="_blank"><i class="bi bi-github"></i></a>
-                                            <a href="mailto:eduardofs13@outlook.com" target="_blank"><i class="bi bi-envelope"></i></a>
-                                          </p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">Equipe Técnica</h2>
+                <hr class="divider" />
+                <div class="equipe-grid">
+                    <article class="membro">
+                        <img class="membro-foto" src="assets/equipe/edu_redm.jpg" alt="Eduardo Francisco" width="130" height="130" loading="lazy">
+                        <h3>Eduardo Francisco</h3>
+                        <p class="membro-cargo">Desenvolvedor de Software</p>
+                        <div class="membro-social">
+                            <a href="https://www.linkedin.com/in/eduardofranciscodasilva/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/edu.081/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://github.com/eduardofd" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="mailto:eduardofs13@outlook.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
                         </div>
-                        <div class="carousel-item">
-                          <div class="single-item">
-                              <div class="row">
-                                  <div class="col-md-5">
-                                      <div class="profile">
-                                          <div class="img-area">
-                                              <img src="assets/equipe/jota_redm.jpg" alt="">
-                                          </div>
-                                          <div class="bio">
-                                              <h2>Jonatha Paes</h2>
-                                              <h4>Pesquisador em Geotecnologias</h4>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                      <div class="content">
-                                          <p><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis commodi consequatur molestiae voluptatum!</p>
-                                          <p class="socials">
-                                            <i class="bi bi-linkedin"></i>
-                                            <i class="bi bi-instagram"></i>
-                                            <i class="bi bi-github"></i>
-                                            <i class="bi bi-envelope"></i>
-                                          </p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+                        <details class="membro-bio">
+                            <summary>Sobre</summary>
+                            <p>Técnico em Agropecuária formado pelo Colégio Agrícola Dom Agostinho Ikas - UFRPE, atualmente cursando Bacharelado em Agronomia pela UFRPE e pesquisador na área de Geotecnologias pelo Núcleo de Geoprocessamento e Sensoriamento Remoto da UFRPE.</p>
+                        </details>
+                    </article>
+                    <article class="membro">
+                        <img class="membro-foto" src="assets/equipe/jota_redm.jpg" alt="Jonatha Paes" width="130" height="130" loading="lazy">
+                        <h3>Jonatha Paes</h3>
+                        <p class="membro-cargo">Pesquisador em Geotecnologias</p>
+                        <div class="membro-social">
                         </div>
-                        <div class="carousel-item">
-                            <div class="single-item">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="profile">
-                                            <div class="img-area">
-                                              <img src="assets/equipe/helio_redm.jpg" alt="">
-                                            </div>
-                                            <div class="bio">
-                                              <h2>Hélio Vinícius</h2>
-                                              <h4>Desenvolvedor de Hardware</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content">
-                                          <p><span><i class="fa fa-quote-left"></i></span>Técnico em Agropecuária formado pelo Colégio Agrícola Dom Agostinho Ikas - UFRPE, atualmente cursando Bacharelado em Agronomia pela UFRPE e pesquisador na área de Geotecnologias pelo Núcleo de Geoprocessamento e Sensoriamento Remoto da UFRPE.</p>
-                                          <p class="socials">
-                                            <i class="bi bi-linkedin"></i>
-                                            <i class="bi bi-instagram"></i>
-                                            <i class="bi bi-github"></i>
-                                            <i class="bi bi-envelope"></i>
-                                          </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- <details class="membro-bio"><summary>Sobre</summary><p>Biografia aqui</p></details> -->
+                    </article>
+                    <article class="membro">
+                        <img class="membro-foto" src="assets/equipe/helio_redm.jpg" alt="Hélio Vinícius" width="130" height="130" loading="lazy">
+                        <h3>Hélio Vinícius</h3>
+                        <p class="membro-cargo">Desenvolvedor de Hardware</p>
+                        <div class="membro-social">
                         </div>
-                        <div class="carousel-item">
-                            <div class="single-item">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="profile">
-                                            <div class="img-area">
-                                              <img src="assets/equipe/prof_redm.jpg" alt="">
-                                            </div>
-                                            <div class="bio">
-                                              <h2>Hernande Pereira</h2>
-                                              <h4>Coordenador de Projetos</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content">
-                                          <p><span><i class="fa fa-quote-left"></i></span>Hernande Pereira da Silva. Doutor em Ciências do Solo pela Universidade Federal Rural de Pernambuco - UFRPE. Mestre em Sensoriamento Remoto com domínio conexo em Geoprocessamento pelo Instituto Nacional de Pesquisas Espaciais - INPE, Especialista em Fotogrametria Aplicada a Engenharia pela Universidade Federal de Pernambuco - UFPE</p>
-                                          <p class="socials">
-                                            <a href="https://br.linkedin.com/in/hernande-pereira-da-silva-4691725b" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                            <a href="https://www.instagram.com/profhernandepereira/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                            <a href="mailto:coordenacao.irrd@ufrpe.br"><i class="bi bi-envelope"></i></a>
-                                          </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- <details class="membro-bio"><summary>Sobre</summary><p>Biografia aqui</p></details> -->
+                    </article>
+                    <article class="membro">
+                        <img class="membro-foto" src="assets/equipe/prof_redm.jpg" alt="Hernande Pereira" width="130" height="130" loading="lazy">
+                        <h3>Hernande Pereira</h3>
+                        <p class="membro-cargo">Coordenador de Projetos</p>
+                        <div class="membro-social">
+                            <a href="https://br.linkedin.com/in/hernande-pereira-da-silva-4691725b" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/profhernandepereira/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="mailto:coordenacao.irrd@ufrpe.br" aria-label="Email"><i class="bi bi-envelope"></i></a>
                         </div>
-                        <div class="carousel-item">
-                            <div class="single-item">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="profile">
-                                            <div class="img-area">
-                                              <img src="assets/equipe/luiz_redm.jpg" alt="">
-                                            </div>
-                                            <div class="bio">
-                                              <h2>Luiz Carlos</h2>
-                                              <h4>Coordenador de Finanças</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content">
-                                          <p><span><i class="fa fa-quote-left"></i></span>Graduado em Licenciatura em Geografia e Especialista em Administração Escolar, tem experiência na área administrativa em programas de pós graduação e como Técnico Administrativo em Laboratório de Geoprocessamento e Sensoriamento Remoto.</p>
-                                          <p class="socials">
-                                            <a href="https://www.instagram.com/luizcarlosdaslins/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                            <a href="mailto:geofilosofia@gmail.com"><i class="bi bi-envelope"></i></a>
-                                          </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
-                    </div>
-                    
+                        <details class="membro-bio">
+                            <summary>Sobre</summary>
+                            <p>Hernande Pereira da Silva. Doutor em Ciências do Solo pela Universidade Federal Rural de Pernambuco - UFRPE. Mestre em Sensoriamento Remoto com domínio conexo em Geoprocessamento pelo Instituto Nacional de Pesquisas Espaciais - INPE, Especialista em Fotogrametria Aplicada a Engenharia pela Universidade Federal de Pernambuco - UFPE</p>
+                        </details>
+                    </article>
                 </div>
             </div>
         </section>

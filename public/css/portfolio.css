@@ -1,4 +1,8 @@
 /* ===== Portfólio ===== */
+#portfolio {
+  background-color: #a5c9ff;
+}
+
 .pf-filtros {
   display: flex;
   flex-wrap: wrap;

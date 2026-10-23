@@ -198,6 +198,16 @@ button:disabled:hover { background-color: #3241db; }
 .container .msg { font-size: 12px; line-height: 16px; margin: 6px 0 0; min-height: 16px; color: #e74c3c; text-align: center; }
 .container .msg.ok { color: #2ecc71; }
 
-/* Link para voltar à homepage */
-.back-home { margin-top: 18px; color: #333; font-size: 13px; text-decoration: none; }
-.back-home:hover { text-decoration: underline; }
+/* Botões Voltar / Início */
+.page-nav { display: flex; gap: 12px; margin-top: 18px; }
+.page-nav a {
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: background 0.2s;
+}
+.page-nav a:hover { background: #fff; }

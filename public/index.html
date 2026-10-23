@@ -7,16 +7,15 @@
         <meta name="author" content="Eduardo Francisco da Silva"/>
         <title>GETA - UFRPE</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/logos/iconav.png"/>
+        <link rel="icon" type="image/x-icon" href="../assets/logos/iconav.png"/>
         <!-- Bootstrap Icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css"/>
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/home.css" rel="stylesheet"/>
+        <link href="css/portfolio.css" rel="stylesheet"/>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -264,67 +263,25 @@
                 </div>
             </div>
         </section>
-        <!-- Portfolio-->
-        <div id="portfolio">
-            <div class="container-fluid p-0">
-                <div class="row g-0">
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/portfolio/fullsize/7.jpg" title="DEPAq - UFRPE">
-                            <img class="img-fluid" src="assets/portfolio/fullsize/7.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Ortofoto</div>
-                                <div class="project-name">DEPAq - UFRPE</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/portfolio/fullsize/8.jpg" title="Paudalho">
-                            <img class="img-fluid" src="assets/portfolio/fullsize/8.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Audiovisual</div>
-                                <div class="project-name">Privê das Jaqueiras</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/portfolio/fullsize/3.jpg" title="Agrofloresta">
-                            <img class="img-fluid" src="assets/portfolio/fullsize/3.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Sensores</div>
-                                <div class="project-name">Agrofloresta - UFRPE</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/portfolio/thumbnails/12.jpg" title="Protótipo Estação Multisensorial">
-                            <img class="img-fluid" src="assets/portfolio/thumbnails/12.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Prototipagem</div>
-                                <div class="project-name">Produção de Protótipos</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/portfolio/fullsize/5.jpg" title="Drones">
-                            <img class="img-fluid" src="assets/portfolio/fullsize/5.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Cursos</div>
-                                <div class="project-name">Pilotagem</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/portfolio/fullsize/6.jpg" title="Desenvolvimento Web">
-                            <img class="img-fluid" src="assets/portfolio/fullsize/6.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Cursos</div>
-                                <div class="project-name">Desenvolvimento</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+        <!-- Portfólio-->
+        <section class="page-section" id="portfolio">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">Portfólio</h2>
+                <hr class="divider" />
+                <div class="pf-filtros" id="portfolioFiltros"></div>
+                <div class="pf-grid" id="portfolioGrid"></div>
             </div>
-        </div>
+        </section>
+        <dialog class="pf-lightbox" id="portfolioLightbox">
+            <figure>
+                <img alt="">
+                <figcaption></figcaption>
+            </figure>
+            <button type="button" class="pf-fechar" aria-label="Fechar">&times;</button>
+            <button type="button" class="pf-prev" aria-label="Anterior">&#8249;</button>
+            <button type="button" class="pf-next" aria-label="Próxima">&#8250;</button>
+        </dialog>
+
 
         <!--Estação Multissensorial-->
         <section class="page-section bg-primary" id="monitoramento">
@@ -334,7 +291,7 @@
                         <h2 class="text-white mt-0">Monitoramento em Tempo Real</h2>
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-4">Faça o login para obter os dados de sua plantação! </p>
-                        <a class="btn btn-light btn-xl" href="login.html" target="_blank">Login</a>
+                        <a class="btn btn-light btn-xl" href="login.html">Login</a>
                     </div>
                 </div>
             </div>
@@ -382,13 +339,12 @@
             
         </ul>                  
             </div>
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">GETA - UFRPE <br> Copyright &copy; 2026</div></div>
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">GETA - UFRPE <br> Copyright &copy; 2024</div></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <script src="js/home.js"></script>
+        <script src="js/portfolio.js"></script>
         <!-- Firebase Analytics (projeto geta-site) -->
         <script type="module">
             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";

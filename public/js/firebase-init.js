@@ -1,14 +1,14 @@
 // Configuração única do Firebase (compartilhada por login.html e monitor.html).
 // A apiKey do Firebase é pública por natureza; a segurança vem das regras do Auth/Database.
 firebase.initializeApp({
-  apiKey: "AIzaSyDRAJT-6EhEwS3Vw2BXbVXvMYdoRGNRvow",
-  authDomain: "geta-site.firebaseapp.com",
-  databaseURL: "https://geta-site-default-rtdb.firebaseio.com",
-  projectId: "geta-site",
-  storageBucket: "geta-site.firebasestorage.app",
-  messagingSenderId: "735904865497",
-  appId: "1:735904865497:web:1c6ac6422aa25ba5d6f2c8",
-  measurementId: "G-LD2D54HDMK"
+  apiKey: "AIzaSyBpi_VoNLtZKW0cL1WeAm-ESR2dZpo2dWE",
+  authDomain: "geta-plataforma.firebaseapp.com",
+  databaseURL: "https://sensor-data-e973e-default-rtddb.firebaseio.com",
+  projectId: "geta-plataforma",
+  storageBucket: "geta-plataforma.firebasestorage.app",
+  messagingSenderId: "513008989523",
+  appId: "1:513008989523:web:423fc5a8fe60378f675da6",
+  measurementId: "G-672LC85VDH"
 });
 
 const auth = firebase.auth();

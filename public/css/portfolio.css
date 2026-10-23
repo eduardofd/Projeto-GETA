@@ -1,0 +1,100 @@
+/* ===== Portfólio ===== */
+.pf-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.pf-filtros button {
+  border: 1px solid var(--bs-primary);
+  background: transparent;
+  color: var(--bs-primary);
+  padding: 6px 18px;
+  border-radius: 50rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.pf-filtros button:hover,
+.pf-filtros button.ativo { background: var(--bs-primary); color: #fff; }
+
+.pf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.pf-item {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #e9ecef;
+  cursor: zoom-in;
+}
+.pf-item[hidden] { display: none; }
+
+.pf-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.pf-item:hover img { transform: scale(1.06); }
+
+.pf-item span {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 30px 14px 12px;
+  text-align: left;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+}
+.pf-item small {
+  display: block;
+  opacity: 0.8;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.pf-item strong { font-size: 0.95rem; }
+
+/* ===== Visualizador ===== */
+.pf-lightbox {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow: visible;
+}
+.pf-lightbox::backdrop { background: rgba(0, 0, 0, 0.88); }
+
+.pf-lightbox figure { margin: 0; text-align: center; }
+.pf-lightbox img { max-width: 90vw; max-height: 78vh; border-radius: 8px; }
+.pf-lightbox figcaption { color: #fff; margin-top: 12px; font-size: 0.95rem; }
+
+.pf-lightbox button {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.pf-lightbox button:hover { background: rgba(255, 255, 255, 0.3); }
+.pf-fechar { top: 16px; right: 16px; }
+.pf-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+.pf-next { right: 16px; top: 50%; transform: translateY(-50%); }

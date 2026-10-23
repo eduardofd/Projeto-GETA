@@ -18,6 +18,4 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Galeria do portfólio
-  new SimpleLightbox({ elements: '#portfolio a.portfolio-box' });
 });

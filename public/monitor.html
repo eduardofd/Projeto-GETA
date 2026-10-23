@@ -1,34 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoramento - Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GETA - Monitoramento</title>
+  <link rel="icon" type="image/png" href="/assets/iconav/iconav.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/monitor.css">
 </head>
 <body>
-    <!--Estação Multissensorial-->
-    <section class="page-section bg-dark text-white">
-        <div class="container px-4 px-lg-5 text-center">
-            <h2 class="mb-4">Monitoramento em Tempo Real</h2>
-            <div class="parent">
-                <h4>Estação Nº1</h4>
-                
-            </div>
-            <div id="chart">
-                <!--Gráfico - Temperatura do ar-->
-                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2448762/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperatura+do+Ar&type=line&xaxis=Hora&yaxis=Graus+%C2%BA"></iframe>
-            
-                <!--Gráfico - Umidade do ar-->
-                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2448762/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Umidade+do+Ar&type=line&xaxis=Hora&yaxis=Umidade+%25"></iframe>
-               
-                <!--Gráfico - Umidade do Solo-->
-                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2448762/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Umidade+do+Solo&type=line&xaxis=Hora&yaxis=Umidade+%25"></iframe>
-                
-                <!--Gráfico - Radiação UV-->
-                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2448762/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Radia%C3%A7%C3%A3o&type=line&xaxis=Hora&yaxis=Raios+UV"></iframe>
-            </div>
+
+  <header class="topnav">
+    <a class="logo-container" href="index.html" title="Voltar ao início">
+      <img src="/assets/icons/s_fundo.png" alt="Logo GETA" class="logo-img">
+      <h1>Estação H-01</h1>
+    </a>
+    <div id="authentication-bar" hidden>
+      <p>
+        <i class="fas fa-user-circle"></i> <span id="user-details"></span>
+        <a href="#" id="logout-link"><i class="fas fa-sign-out-alt"></i> Sair</a>
+      </p>
+    </div>
+  </header>
+
+  <!-- Fica oculto até o Firebase confirmar que há um usuário logado -->
+  <main class="main-container" id="content-sign-in" hidden>
+
+    <div class="section-header">
+      <h2>Leituras Atuais</h2>
+      <p>Dados numéricos em tempo real coletados pelos sensores</p>
+    </div>
+
+    <div class="cards">
+      <div class="card card-temp">
+        <div class="card-icon"><i class="fas fa-thermometer-half"></i></div>
+        <div class="card-info">
+          <p class="card-label">Temperatura do Ar</p>
+          <p class="reading"><span id="temp">0.00</span> &deg;C</p>
         </div>
-    </section>
-   
+      </div>
+      <div class="card card-hum">
+        <div class="card-icon"><i class="fas fa-tint"></i></div>
+        <div class="card-info">
+          <p class="card-label">Umidade do Ar</p>
+          <p class="reading"><span id="hum">0.00</span> &percnt;</p>
+        </div>
+      </div>
+      <div class="card card-soil">
+        <div class="card-icon"><i class="fas fa-seedling"></i></div>
+        <div class="card-info">
+          <p class="card-label">Umidade do Solo</p>
+          <p class="reading"><span id="soil">0.00</span> &percnt;</p>
+        </div>
+      </div>
+      <div class="card card-uv">
+        <div class="card-icon"><i class="fas fa-sun"></i></div>
+        <div class="card-info">
+          <p class="card-label">Radiação UVB</p>
+          <p class="reading"><span id="uv">0.00</span> uvb</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header espaco">
+      <h2>Status dos Sensores</h2>
+      <p>Análise visual das faixas de operação dos parâmetros</p>
+    </div>
+
+    <div class="cards">
+      <div class="card grid-gauge-card"><div class="gauge-container"><canvas id="tempGaugeChart"></canvas></div></div>
+      <div class="card grid-gauge-card"><div class="gauge-container"><canvas id="humGaugeChart"></canvas></div></div>
+      <div class="card grid-gauge-card"><div class="gauge-container"><canvas id="soilGaugeChart"></canvas></div></div>
+      <div class="card grid-gauge-card"><div class="gauge-container"><canvas id="uvGaugeChart"></canvas></div></div>
+    </div>
+
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7"></script>
+  <script src="js/firebase-init.js"></script>
+  <script src="js/monitor.js"></script>
 </body>
 </html>
